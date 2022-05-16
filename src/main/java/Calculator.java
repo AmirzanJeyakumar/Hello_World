@@ -5,15 +5,6 @@ public class Calculator {
 
     public static void main(String[] args) {
 
-         /*
-           Create a calculator app for a painter:
-           Size of the wall
-           What happens if there is things on the wall like a door or socket
-           How many paint buckets will I need to paint my wall
-           What happens if I have different bucket sizes
-           Incorporate arrays: multiple walls with different doors, sockets etc.
-         */
-
         System.out.println("Calculator Initialised!");
         System.out.println("Use metres as a measurement of length and litres for volume");
 
@@ -37,12 +28,6 @@ public class Calculator {
             wallAreaList.add(wallArea);
         }
 
-        /*
-        Iterate through the array we created and at every index (wall), we will prompt the user to provide the number of
-        objects that we do not want to paint per wall. In a For loop, create two arrays that represent the height and
-        width of these objects for every wall that the user has specified.
-        */
-
         ArrayList<Double> objectAreaList = new ArrayList<>();
 
         for (int wallIndex=0; wallIndex < numOfWalls; wallIndex++) {
@@ -64,11 +49,6 @@ public class Calculator {
                 }
             }
         }
-
-        /*
-        We now have two arrays which contain area values for every wall and the total area of objects
-        Created a final array with the area taking into account the excluded area
-        */
 
         ArrayList<Double> finalAreaList = new ArrayList<>();
         double totalFinalArea = 0;
