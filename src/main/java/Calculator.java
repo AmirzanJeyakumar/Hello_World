@@ -20,18 +20,10 @@ public class Calculator {
 
         Scanner scanner = new Scanner(System.in);
 
-        /*
-        Create two array lists that represent wall height and width
-        Each index will represent the dimension for a singular wall
-        */
-
-
         ArrayList<Double> wallAreaList = new ArrayList<>();
-
 
         System.out.println("How many walls would you like to paint? (\"Input a number greater than zero\")");
         double numOfWalls = scanner.nextDouble();
-
 
         for (int wall = 0; wall < numOfWalls; wall++) {
 
@@ -43,9 +35,7 @@ public class Calculator {
 
             double wallArea = wallHeight * wallWidth;
             wallAreaList.add(wallArea);
-
         }
-
 
         /*
         Iterate through the array we created and at every index (wall), we will prompt the user to provide the number of
