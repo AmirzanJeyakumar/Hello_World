@@ -18,8 +18,8 @@ public class Main {
         System.out.println("Use metres as a measurement of length and litres for volume");
 
 
-        System.out.println("How many walls would you like to paint?");
-        System.out.println("Input a number greater than zero");
+        System.out.println("How many walls would you like to paint? (\"Input a number greater than zero\")");
+
         double numOfWalls = scanner.nextDouble();
         double totalWallArea = 0;
 
@@ -62,6 +62,7 @@ public class Main {
         double bucketVolume = scanner.nextDouble();
 
         double finalArea = (totalWallArea - totalExcludeArea)*(coat*1.0);
+        System.out.println("Area that needs to be painted: " + finalArea);
 
         double paintVolume = finalArea * 0.1;
         System.out.println("Volume of paint required: " + paintVolume);
@@ -71,7 +72,6 @@ public class Main {
 
 
     }
-    
 }
 
 
