@@ -25,8 +25,7 @@ public class Calculator {
         Each index will represent the dimension for a singular wall
         */
 
-        ArrayList<Double> wallHeightList = new ArrayList<>();
-        ArrayList<Double> wallWidthList = new ArrayList<>();
+
         ArrayList<Double> wallAreaList = new ArrayList<>();
 
 
@@ -38,17 +37,14 @@ public class Calculator {
 
             System.out.println("What is the height of the wall?");
             double wallHeight = scanner.nextDouble();
-            wallHeightList.add(wallHeight);
 
             System.out.println("What is the width of the wall?");
             double wallWidth = scanner.nextDouble();
-            wallWidthList.add(wallWidth);
 
             double wallArea = wallHeight * wallWidth;
             wallAreaList.add(wallArea);
 
         }
-
 
 
         /*
@@ -57,7 +53,7 @@ public class Calculator {
         width of these objects for every wall that the user has specified.
          */
 
-
+        ArrayList<Double> objectAreaList = new ArrayList<>();
 
         for (int wallIndex=0; wallIndex < wallAreaList.size(); wallIndex++) {
             System.out.println("Are there areas of wall (number: " + (wallIndex+1) +") that you do not want to paint? E.g doors, windows and sockets");
@@ -69,25 +65,16 @@ public class Calculator {
                 System.out.println("How many different objects do you want to exclude from painting on this wall?");
                 int numOfObjects = scanner.nextInt();
 
-                double[] objectHeightList = new double[numOfObjects];
-                double[] objectWidthList = new double[numOfObjects];
-                double[] objectAreaList = new double[numOfObjects];
-
-
                 for (int object = 0; object < numOfObjects; object++) {
 
                     System.out.println("What is the height of this object?");
                     double objectHeight = scanner.nextDouble();
-                    objectHeightList[object] = objectHeight;
-
 
                     System.out.println("What is the width of this object?");
                     double objectWidth = scanner.nextDouble();
-                    objectWidthList[object] = objectWidth;
 
                     double objectArea = objectHeight * objectWidth;
-
-                    // (objectHeightList[object] * objectWidthList[object]);
+                    objectAreaList.add(object,objectArea);
 
                 }
             }
