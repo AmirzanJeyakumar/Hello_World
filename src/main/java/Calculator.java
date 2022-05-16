@@ -34,6 +34,12 @@ public class Calculator {
 
             System.out.println("How many different objects do you want to exclude from painting on wall number: " + (wallIndex+1) +"?");
             int numOfObjects = scanner.nextInt();
+
+            if (numOfObjects==0) {
+                double blank = 0;
+                objectAreaList.add(blank);
+            }
+
             if (numOfObjects>0) {
                 for (int object = 0; object < numOfObjects; object++) {
 
@@ -48,6 +54,8 @@ public class Calculator {
 
                 }
             }
+
+
         }
 
         ArrayList<Double> finalAreaList = new ArrayList<>();
